@@ -1,0 +1,408 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+
+html {
+    font-family: Vazirmatn, sans-serif !important;
+}
+
+.breadcrumb-element p {
+	margin: 0 .5rem 0 0;
+	padding: 0;
+	line-height: normal;
+}
+
+button#explorer .fold {
+	opacity: .8;
+	transition: transform .3s;
+}
+
+.content-meta[show-comma="true"] > span:not(:last-child) {
+	margin-left: 8px !important;
+    margin-right: 0px !important;
+}
+
+.tags {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.folder-icon {
+	margin-right: 0px !important;
+	margin-left: 5px !important;
+}
+
+#explorer-content ul {
+	padding-right: .5rem !important;
+	padding-left: 0px !important;
+}
+
+.explorer {
+    border:1px solid var(--lightgray);
+    border-radius:5px;
+    padding:10px;
+    font-size:1rem;
+}
+
+.toc {
+    border:1px solid var(--lightgray);
+    border-radius:5px;
+    padding:10px;
+    font-size:1rem;
+}
+
+#toc-content .depth-0 {
+	padding: 0px !important;
+	padding-right: 1rem !important;
+}
+
+#toc-content .depth-1 {
+	padding: 0px !important;
+	padding-right: 1.5rem !important;
+}
+
+#toc-content .depth-2 {
+	padding: 0px !important;
+	padding-right: 2rem !important;
+}
+
+#toc-content .depth-3 {
+	padding: 0px !important;
+	padding-right: 2.5rem !important;
+}
+
+.backlinks > ul {
+    border: 1px solid var(--lightgray);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 35px;
+    font-size: 1rem;
+    list-style: circle;
+}
+
+
+
+li:has(> .folder-outer:not(.open)) > .folder-container > svg {
+	transform: rotate(90deg) !important;
+}
+
+footer {
+	text-align: center;
+}
+
+footer ul {
+	display: unset;
+}
+
+code { 
+	direction: ltr !important;
+}
+
+.search {
+    max-width: unset;
+}
+
+div.search.mobile-only {
+    padding-right: 10px !important;
+}
+
+.center img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+// Farsi Blockquote
+
+.markdown-preview-view .farsi-blockquote {
+    direction: rtl;
+    
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0 20px 0 0;
+
+    border-right: 2px solid var(--text-muted) !important;
+    border-left: unset;
+
+    
+    color: var(--text-muted);
+    /* color: gray; */
+}
+  
+.farsi-blockquote {
+    direction: rtl;
+    padding: 0 20px 0 0;
+
+    max-width: var(--max-width);
+
+    border-right: 2px solid var(--text-muted) !important;
+    border-left: unset;
+
+    font-family: Sahel;
+    font-size: 16px;
+    /* font-style: italic; */
+    color: var(--text-muted);   
+    max-width: var(--max-width);
+    margin: 0 auto!important;
+    width: var(--line-width-adaptive);
+    /* color: gray; */
+}
+
+.farsi-blockquote-black {
+    color: var(--text-normal) !important;
+}
+
+.farsi-blockquote::before {
+    content:unset;
+}
+
+blockquote .farsi-footer {
+    margin-top: 1em;
+    padding: 0;
+    color: var(--text-muted);
+    font-size: 10pt;
+    text-align: right;
+    font-family: Sahel;
+    font-style: normal;
+    color: gray;
+}
+
+.markdown-preview-view blockquote .farsi-footer {
+    margin-top: 1em !important;
+    padding: 0;
+    color: var(--text-muted);
+    font-size: 10pt;
+    text-align: right;
+    font-family: Sahel;
+    font-style: normal;
+    /* color: gray; */
+}
+
+blockquote footer:before {
+    content: '— ';
+}
+
+
+.markdown-preview-view blockquote {
+    direction: rtl;
+    
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0 calc(var(--nested-padding)) 0 0;
+
+    border-right: 2px solid var(--text-muted) !important;
+    border-left: unset;
+
+    
+    color: var(--text-muted);
+    /* color: gray; */
+}
+  
+blockquote {
+    direction: rtl;
+
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0 calc(var(--nested-padding)) 0 0;
+
+    // border-right: 2px solid var(--text-muted) !important;
+    border-left: unset;
+
+    font-family: Sahel;
+    font-size: 17px;
+    /* font-style: italic; */
+    color: var(--text-muted);   
+    width: var(--line-width-adaptive);
+    /* color: gray; */
+}
+
+blockquote::before {
+    content: none !important;
+}
+
+// English Blockquote
+
+.markdown-preview-view .english-blockquote {
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-left: 2px solid var(--text-muted) !important;
+    border-right: none !important;
+    direction: ltr;
+    color: var(--text-muted);
+    font-size: 19px !important;
+    font-style: italic;
+    padding: 0 0 0 20px;
+}
+  
+.english-blockquote {
+    direction: ltr;
+    
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0 0 0 20px;
+
+    border-left: 2px solid var(--text-muted) !important;
+    border-right: none !important;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--text-muted);   
+}
+
+.english-blockquote::before {
+    content: none;
+}
+
+blockquote .english-footer {
+    margin-top: 1em;
+    padding: 0;
+    color: var(--text-muted);
+    font-size: 10pt;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.markdown-preview-view blockquote .english-footer {
+    margin-top: 1em !important;
+    padding: 0;
+    color: var(--text-muted);
+    font-size: 10pt;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    
+}
+
+blockquote footer:before {
+    content: '— ';
+}
+
+
+// Highlight Coloring
+
+.text-highlight {
+    font-weight: normal;
+    background-color: transparent;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    transition: background 200ms ease;
+    background-image: linear-gradient(120deg, var(--secondary), var(--secondary));
+}
+
+.text-highlight:hover {
+    background-size: 100% 100%;
+}
+
+// Center tables
+
+.table-container > table {
+    margin: auto;
+}
+
+// Two columns in index page
+
+// .index ul{
+//     list-style-type: disc;
+//     -webkit-columns: 2;
+//     -moz-columns: 2;
+//     columns: 2;
+//     list-style-position: inside;
+// }
+
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+body::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+    display:none;
+}
+
+th {
+    text-align: center !important;
+}
+
+// Katex LTR
+
+.poem-title {
+    text-align: center;
+    font-family: IranNastaliq !important;
+}
+
+h3.poem-title::before {
+    content: none;
+}
+
+.poem-verse-div {
+    margin: auto;
+    height: 30px;
+    text-align: center;
+    clear: both;
+    font-weight: 400;
+}
+
+.poem-right-verse-div {
+    width: 45%;
+    float: right;
+    text-align: left;
+}
+
+.poem-left-verse-div {
+    width: 45%;
+    float: left;
+    text-align: right;
+}
+
+.poem-reference {
+    display:table;
+    margin:0 auto;
+    direction: rtl;
+}
+
+.poem-verse-num {
+    position: relative !important;
+    right: -5% !important;
+    top: 34px !important;
+    line-height: 0px !important;
+    margin-top: 6px !important;
+    margin-right: 3px !important;
+    font-family: 'Sahel FD' !important;
+    font-weight: 500 !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    color: var(--text-faint) !important;
+}
